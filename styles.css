@@ -2,86 +2,90 @@
     box-sizing: border-box;
   }
   
-  html, body {
+  body ,html   {
     font-family: "Arial", sans-serif;
-    background: #fff;
-    padding: 80px 30px 30px;
+    background-color: #ffecd0;
+    padding: 40px 30px 30px;
     color: #444;
     height: 100%;
-  }
-  
-  ol, ul {
-    margin: 0 0 50px 0;
-  }
-  
-  h1 {
-    font-weight: bold;
-    color: black;
-  }
-  
-  p {
-    line-height: 1.6em;
-    margin-bottom: 10px;
-    font-size: 18px;
-    padding: 0;
-  }
-  
-  p:last-child {
-    margin-bottom: 40px;
-  }
-  
-  code {
-    background: #f8f8f8;
-    color: #d64f9b;
-    border: 1px solid #eee;
-    padding: 2px;
-    border-radius: 3px;
-  }
-  
-  a {
-    font-weight: bold;
-    color: deeppink;
-    text-decoration: none;
-    transition: all 200ms;
-  }
-  
-  a:hover,
-  a:focus {
-    color: black;
-  }
-  
-  article {
-    min-height: 50vh;
-    margin-bottom: 50px;
-  }
-  
-  article .margin {
-    margin-bottom: 100vh;
-  }
-  
-  nav {
-    display: flex;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #303947;
-    position: fixed;
-    padding: 30px;
-  }
-  
-  nav a {
-    display: inline-flex;
-    padding: 20px 30px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav a:hover,
-  nav a:focus {
-    color: white;
-  }
-  
-  nav a.active {
-    color: deeppink;
-  }
-  
+  } 
+/* Center the container, increase its size, and remove top margin */
+.container {
+  max-width: 1250px;  /* Increased size of the container */
+  margin: 0 auto 10px;  /* Remove top margin, add 10px to the bottom */
+  padding: 50px;  /* Increased padding */
+  border: 2px solid #000; /* Consistent border */
+  box-sizing: border-box;
+  border-radius: 15px; /* Rounded corners */
+  background-color: #444444; /* Darker grey background color */
+}
+
+/* Style the title */
+.title-div {
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5em; /* Slightly larger font size for title */
+  color: #ffffff; /* White text for better contrast */
+}
+
+/* Style the iframe */
+.iframe-div {
+  margin-bottom: 30px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.content-iframe {
+  width: 100%;      /* Full width of the container */
+  height: 850px;    /* Increased height to ensure full visibility */
+  border: none;
+  border-radius: 10px; /* Slightly rounded corners on the iframe */
+}
+
+.textbox-div {
+  width: 100%;
+  margin: 0 auto; /* Center the container */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.content-textbox {
+  background-color: #dcdcdc; /* Light grey background for textbox */
+  border: 2px solid #ffe9d1; /* Border color with RGB(255, 236, 208) */
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Inner shadow for text box */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  width: 100%; /* Make the textbox stretch to fit the container width */
+  max-width: 1200px; /* Fix the maximum width */
+  height: auto; /* Allow the height to adjust based on content */
+  min-height: 400px; /* Ensure a minimum height */
+  overflow: auto; /* Add scrollbars if content exceeds the size */
+  line-height: 1.6; /* Add space between lines of text */
+  font-size: 16px; /* Adjust font size if necessary */
+}
+
+h2, h3 {
+  color: #333; /* Dark grey color for headings */
+  margin-top: 0;
+  padding-top: 10px; /* Add padding to the top of headings */
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+strong {
+  font-weight: bold;
+}
+.image-div {
+  margin-top: 20px; /* Space above the image */
+}
+
+.responsive-image {
+  width: 100%; /* Make the image fit the entire width of the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Rounded corners for the image */
+}
