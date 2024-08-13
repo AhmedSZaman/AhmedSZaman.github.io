@@ -3,43 +3,97 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<iframe width="1800" height="800" src="https://lookerstudio.google.com/embed/reporting/f6454570-862e-407a-a89b-4da8d9dcda68/page/qY36D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>F1 Stats</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <nav class="nav">
-        <a href="#s1" class="active">Intro</a>
-        <a href="#s2">Compatibility</a>
-        <a href="#s3">Usage</a>
-        <a href="#s4">Credits</a>
-      </nav>
+    <body>
+      <div class="container">
+        <div class="title-div">
+            <h1 class="title">Fromula 1 AWS End to End Project</h1>
+        </div>
+        <div class="iframe-div">
+          <iframe class="content-iframe" src="https://lookerstudio.google.com/embed/reporting/8f8c377d-083c-4ab4-a8af-8a6237a62bd6/page/p_xas0tatxjd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+        <div class="textbox-div">
+          <div class="content-textbox">
+            <h2>Project Title: F1 Data Analysis and Visualisation</h2>
+             
+            <h3>Project Overview:</h3>
+            <p>The project involves analysing Formula 1 (F1) data to gain insights into race results, constructor standings, and race events. The primary goal is to aggregate and visualise data from various sources to produce comprehensive reports and dashboards.</p>
+
+            <h3>Tools and Technologies Used:</h3>
+            <div class="image-div">
+              <img src="diagram.png" alt="Tools and Technologies" class="responsive-image">
+          </div>
+            <ul>
+                <li><strong>AWS Lambda:</strong> Automatically pulls data from an online datastore and triggers data processing workflows.</li>
+                <li><strong>S3 Bucket:</strong> Used for storing raw and processed CSV files.</li>
+                <li><strong>AWS Glue:</strong> Employed for Extract, Transform, Load (ETL) processes. Transforms raw CSV data into a format suitable for querying in Athena.</li>
+                <li><strong>Apache Spark:</strong> Utilised for processing and converting large volumes of data from text files to Parquet files.</li>
+                <li><strong>AWS Athena:</strong> Used to analyse and prepare transformed results for visualisation tools.</li>
+                <li><strong>Looker Studio:</strong> Implemented to create interactive dashboards and reports based on the analysed data.</li>
+                <li><strong>HTML & CSS:</strong> Used to design and style the web page displaying the reports and visualisations.</li>
+            </ul>
+
+            <h3>Methodology:</h3>
+            <ul>
+                <li><strong>Data Collection:</strong>
+                    <ul>
+                        <li>AWS Lambda: Automatically pulls data from an online datastore and uploads it to S3.</li>
+                        <li>Gathered additional data from the online datastore.</li>
+                        <li>Stored raw data in S3 buckets and performed initial data cleaning.</li>
+                    </ul>
+                </li>
+                <li><strong>Data Processing:</strong>
+                    <ul>
+                        <li>Used AWS Glue to extract and transform data, ensuring consistency and removing null values.</li>
+                        <li>Converted text files to Parquet format using Apache Spark for efficient querying.</li>
+                    </ul>
+                </li>
+                <li><strong>Data Analysis:</strong>
+                    <ul>
+                        <li>Queried data using AWS Athena to generate insights, such as the maximum number of race rounds per year and constructor standings.</li>
+                        <li>Analysed results to identify trends and key metrics.</li>
+                    </ul>
+                </li>
+                <li><strong>Data Visualisation:</strong>
+                    <ul>
+                        <li>Created interactive dashboards in Looker Studio to display race results, constructor standings, and other key metrics.</li>
+                        <li>Embedded Looker Studio reports into a web page using HTML and CSS for public access.</li>
+                    </ul>
+                </li>
+                <li><strong>Embedding and Display:</strong>
+                    <ul>
+                        <li>Used HTML iframes to embed Looker Studio reports into the web page.</li>
+                        <li>Styled the webpage with CSS to ensure a clean and professional appearance, including rounded corners, inner shadows for textboxes, and a consistent border colour around the page.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Results:</h3>
+            <ul>
+                <li>Developed an interactive dashboard that allows users to explore F1 data, including race results, constructor standings, and race details.</li>
+                <li>Enabled real-time updates and visualisation of F1 statistics and trends.</li>
+                <li>Successfully embedded the report on a webpage, ensuring the design and functionality are user-friendly and visually appealing.</li>
+            </ul>
+
+            <h3>Challenges and Solutions:</h3>
+            <ul>
+                <li><strong>Issue:</strong> Data duplication occurred when appending new data to Athena tables.
+                    <ul>
+                        <li><strong>Solution:</strong> Implemented Glue bookmarks to keep track of processed data.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Conclusion:</h3>
+            <p>The F1 Data Analysis and Visualisation project successfully utilised AWS services, including Lambda for automated data pulling, 
+              and Looker Studio to create a dynamic and interactive dashboard. The project demonstrated effective data processing, analysis, and visualisation techniques, resulting in a comprehensive tool for exploring F1 statistics.</p>   </div>
+      </div>
       
-      <article id="s1">
-        <h1>AWS End To End Project</h1>
-        <p>LAMDA -> S3 -> Glue Crawlers-> Athena -> Google Data Studio -> User</p>
-        <p> First Query: Finding constructor wins by team and nationality</p>
-        <p> Second Query: Average driver place finish</p>
-        <p>Example link to <span class="nav"><a href="#s3">Usage</a></span></p>
-        <iframe width="1400" height="1050" src="https://lookerstudio.google.com/embed/reporting/8f8c377d-083c-4ab4-a8af-8a6237a62bd6/page/ztx7D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-      </article>
-      
-      <article id="s2">
-        <h2>Compatibility 👍</h2>
-        <p>Due to leveraging Jquery, this CodePen works well on all Browsers, both Desktop and Mobile also work perfectly.</p>
-      </article>
-      
-      <article id="s3">
-        <h2>Usage</h2>
-        <p>Simply link to any <code>id</code> on your page from within your <code>.nav</code>.</p>
-      </article>
-      
-      <article class="margin" id="s4">
-        <h2>Credits</h2>
-        <p>This script was written by myself and is intended for public use. please <b>do not</b> sell this script as an individual product. It may be included in your projects that are sold as an entire website or application.</p>
-        <p>If you like this pen, you can follow me on <a href="https://twitter.com/uixmat/" target="_blank">Twitter</a>.</p>
-      </article>
+    </body>  
 </html>
